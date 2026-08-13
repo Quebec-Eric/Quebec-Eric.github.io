@@ -1,12 +1,12 @@
 :root {
-  --honey: #E8A548;
-  --honey-soft: #F0BC6E;
-  --ink: #241A10;
-  --text: #3A2E22;
-  --muted: #8A7860;
+  --bg-page: #EAF2FA;
+  --bg-page-soft: #D7E7F6;
+  --ink: #1E2A38;
+  --text: #2C3A4A;
+  --muted: #7C8CA0;
   --card-bg: #FFFFFF;
-  --accent: #B5651D;
-  --chip-bg: #FBF3E6;
+  --accent: #3B6EA5;
+  --chip-bg: #F2F7FC;
 
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Work Sans', -apple-system, sans-serif;
@@ -28,12 +28,7 @@ body {
   font-family: var(--font-body);
   color: var(--text);
   line-height: 1.65;
-  background-color: var(--honey);
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.10) 0, transparent 45%),
-    repeating-linear-gradient(60deg, rgba(36,26,16,0.045) 0 2px, transparent 2px 34px),
-    repeating-linear-gradient(-60deg, rgba(36,26,16,0.045) 0 2px, transparent 2px 34px),
-    repeating-linear-gradient(0deg, rgba(36,26,16,0.045) 0 2px, transparent 2px 34px);
+  background-color: var(--bg-page);
   min-height: 100vh;
   padding: 48px 20px 80px;
 }
@@ -42,25 +37,31 @@ body {
   max-width: 760px;
   margin: 0 auto 24px;
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  border: var(--border-width) solid var(--ink);
+  background: var(--card-bg);
 }
 
 .top-nav a {
+  flex: 1;
+  text-align: center;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 15px;
   text-decoration: none;
   color: var(--ink);
   background: var(--card-bg);
-  border: var(--border-width) solid var(--ink);
-  padding: 10px 20px;
+  padding: 14px 10px;
   letter-spacing: 0.02em;
-  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+  border-right: var(--border-width) solid var(--ink);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.top-nav a:last-child {
+  border-right: none;
 }
 
 .top-nav a:hover {
-  transform: translateY(-2px);
+  background: var(--bg-page-soft);
 }
 
 .top-nav a.active {
@@ -132,7 +133,7 @@ section h2 {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--accent);
-  border-bottom: 2px solid var(--honey-soft);
+  border-bottom: 2px solid var(--bg-page-soft);
   padding-bottom: 8px;
   margin: 0 0 18px 0;
 }
@@ -160,7 +161,7 @@ section h2 {
 
 .chip:hover {
   transform: scale(1.12);
-  background: var(--honey);
+  background: var(--bg-page);
   box-shadow: 3px 3px 0 var(--ink);
 }
 
