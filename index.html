@@ -1,59 +1,38 @@
 <!DOCTYPE html>
-<!-- 
-  Essa primeira linha diz pro navegador: "isso aqui é um documento HTML5".
-  Toda página HTML começa com ela.
--->
+
 <html lang="pt-br">
-<!-- 
-  A tag <html> engloba a página inteira.
-  lang="pt-br" só avisa que o idioma principal é português do Brasil
-  (ajuda leitores de tela e o Google a entenderem o conteúdo).
--->
+
 
 <head>
-  <!--
-    O <head> é a "área de bastidores": não aparece na tela,
-    mas configura coisas importantes: título da aba, estilos (CSS),
-    ícone da página, etc.
-  -->
+ 
   <meta charset="UTF-8">
-  <!-- Garante que acentos (ã, ç, é...) apareçam certinho -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Faz a página se ajustar direito em celular -->
 
   <title>Meu Nome — Página Pessoal</title>
-  <!-- Isso é o que aparece na aba do navegador -->
 
   <style>
-    /* 
-      Tudo dentro de <style> é CSS: as regras de aparência
-      (cor, tamanho, espaçamento, fonte...).
-      A sintaxe é: seletor { propriedade: valor; }
-    */
-
-    /* Reset simples: tira margens padrão que os navegadores colocam */
-    * {
+ 
+     {
       box-sizing: border-box;
     }
 
     body {
       margin: 0;
-      font-family: Georgia, 'Times New Roman', serif; /* fonte usada no texto */
-      background-color: #f7f5f1;   /* cor de fundo da página inteira */
-      color: #2b2b2b;               /* cor padrão do texto */
-      line-height: 1.6;             /* espaço entre linhas, melhora leitura */
+      font-family: Georgia, 'Times New Roman', serif; 
+      background-color: #f7f5f1;   
+      color: #2b2b2b;              
+      line-height: 1.6;             
     }
 
-    /* .container é uma "classe" CSS: um estilo reutilizável.
-       Usamos ela pra limitar a largura do conteúdo e centralizar. */
+
     .container {
       max-width: 800px;
-      margin: 0 auto;      /* 0 em cima/baixo, auto nas laterais = centraliza */
+      margin: 0 auto;     
       padding: 40px 20px;
     }
 
-    /* Estilo do menu de navegação no topo */
+   
     nav {
       margin-bottom: 40px;
       border-bottom: 1px solid #ddd;
@@ -62,18 +41,18 @@
 
     nav a {
       margin-right: 20px;
-      text-decoration: none;   /* tira o sublinhado padrão do link */
-      color: #7a3b2e;          /* cor terracota, combina com o fundo bege */
+      text-decoration: none;  
+      color: #7a3b2e;          
       font-weight: bold;
     }
 
     nav a:hover {
-      text-decoration: underline; /* sublinha só quando passa o mouse */
+      text-decoration: underline; 
     }
 
-    /* Cabeçalho com foto + nome */
+    
     header.perfil {
-      display: flex;           /* coloca foto e texto lado a lado */
+      display: flex;           
       align-items: center;
       gap: 25px;
       margin-bottom: 40px;
@@ -82,7 +61,7 @@
     header.perfil img {
       width: 130px;
       height: 130px;
-      border-radius: 50%;      /* deixa a foto redonda */
+      border-radius: 50%;      
       object-fit: cover;
       border: 3px solid #7a3b2e;
     }
@@ -94,7 +73,6 @@
     }
 
     h1 + p {
-      /* isso seleciona o <p> que vem logo depois de um <h1> */
       margin: 0;
       color: #666;
       font-style: italic;
@@ -131,14 +109,9 @@
 </head>
 
 <body>
-  <!--
-    O <body> é onde fica TUDO que realmente aparece na tela:
-    textos, imagens, links, listas...
-  -->
 
   <div class="container">
 
-    <!-- ===== MENU DE NAVEGAÇÃO ===== -->
     <nav>
       <a href="#">Início</a>
       <a href="#publicacoes">Publicações</a>
@@ -146,12 +119,8 @@
       <a href="#contato">Contato</a>
     </nav>
 
-    <!-- ===== CABEÇALHO COM FOTO E NOME ===== -->
+   
     <header class="perfil">
-      <!-- 
-        Troque "foto.jpg" pelo caminho real da sua foto quando for usar.
-        Por enquanto deixei um placeholder de exemplo.
-      -->
       <img src="https://placehold.co/130x130" alt="Foto de perfil">
       <div>
         <h1>Seu Nome Completo</h1>
@@ -159,22 +128,18 @@
       </div>
     </header>
 
-    <!-- ===== BIO / SOBRE ===== -->
+
     <section id="sobre">
       <h2>Sobre mim</h2>
       <p>
-        Aqui vai um parágrafo contando quem você é, o que estuda ou trabalha,
-        e um pouco da sua trajetória. Repare que uso a tag
-        <code>&lt;p&gt;</code> pra cada parágrafo de texto.
+
       </p>
       <p>
-        Você pode colocar links dentro do texto assim:
-        estudei na <a href="https://www.unicamp.br" target="_blank">Unicamp</a>,
-        onde trabalhei com o professor Fulano de Tal.
+
       </p>
     </section>
 
-    <!-- ===== LISTA DE INTERESSES ===== -->
+
     <section id="interesses">
       <h2>Interesses</h2>
       <ul>
@@ -184,7 +149,7 @@
       </ul>
     </section>
 
-    <!-- ===== PUBLICAÇÕES (exemplo de lista mais elaborada) ===== -->
+
     <section id="publicacoes">
       <h2>Publicações</h2>
       <ul>
@@ -197,15 +162,15 @@
       </ul>
     </section>
 
-    <!-- ===== CONTATO ===== -->
+  
     <section id="contato">
       <h2>Contato</h2>
       <p>Email: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
     </section>
 
-    <!-- ===== RODAPÉ ===== -->
+ 
     <footer>
-      Página feita com HTML e CSS puro — sem frameworks.
+  
     </footer>
 
   </div>
