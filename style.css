@@ -363,6 +363,112 @@ section h2 {
   margin-top: 2px;
 }
 
+.talk-item {
+  padding: 16px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.talk-item:last-child {
+  border-bottom: none;
+}
+
+.talk-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.talk-type {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  background: var(--chip-bg);
+  border: 1px solid var(--accent);
+  padding: 3px 8px;
+}
+
+.talk-date {
+  font-size: 13px;
+  color: var(--muted);
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.talk-title {
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+
+.talk-venue {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.talk-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.resource-link.small {
+  padding: 6px 14px;
+  font-size: 13px;
+}
+
+.student-group {
+  margin-bottom: 22px;
+}
+
+.student-group:last-child {
+  margin-bottom: 0;
+}
+
+.student-group h3 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 8px 0;
+}
+
+.student-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.student-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.student-list li:last-child {
+  border-bottom: none;
+}
+
+.student-name {
+  font-weight: 600;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.student-meta {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: right;
+}
+
 .contact-field {
   margin-bottom: 16px;
 }
